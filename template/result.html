@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News Detection Result</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        h1 {
+            text-align: center; 
+            background-color: #333; /* Dark grey background color */
+            color: #fff; /* White text color */
+            padding: 10px 0;
+            border-radius: 5px; 
+        }
+        body {
+            background-color: #eee; /* Light grey background color */
+        }
+        .result {
+            text-align: center;
+            font-weight: bold;
+            font-size: 40px;
+            color: #000; /* Black text color */
+            margin-top: 20px;
+        }
+        .redirect-btn {
+            margin: 20px auto; /* Center the button horizontally */
+            padding: 8px 16px; /* Adjusted smaller padding */
+            font-size: 14px; /* Adjusted font size */
+            font-weight: bold;
+            border-radius: 5px;
+            background-color: #333; /* Dark grey background color */
+            color: #fff; /* White text color */
+            border: none;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .redirect-btn:hover {
+            background-color: #000; /* Black color on hover */
+        }
+
+        .navbar {
+            background-color: #333; /* Dark grey background color for the navbar */
+        }
+
+        .navbar-dark .navbar-brand {
+            color: #fff; /* White text color for the brand */
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+            color: #fff; /* White text color for the links */
+        }
+
+        .navbar-dark .navbar-toggler-icon {
+            background-color: #fff; /* White color for the toggler icon */
+        }
+
+        /* Footer styles */
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333; /* Dark grey background color */
+            color: #fff; /* White text color */
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 0; /* Remove default margin */
+        }
+
+        footer a {
+            color: #fff; /* White text color for footer links */
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="bs-example">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+        <a href="/" class="navbar-brand">Fake News Detection</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/a">About Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<h1>Fake News Detection Result</h1>
+<p><b>The text you entered:</b></p>
+<p>{{ text }}</p>
+<p><b>The model predicts that this text is:</b></p>
+<p class="result">{{ result }}</p>
+<a href="/" class="redirect-btn">Go Back to Home</a>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News Detection</title>
+    
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        h1 {
+            text-align: center; 
+            background-color: #333; /* Dark grey background color */
+            color: #fff; /* White text color */
+            padding: 10px 0;
+            border-radius: 5px; 
+        }
+        body {
+            background-color: #eee; /* Light grey background color */
+        }
+        label {
+            text-align: center; 
+            background-color: #333; /* Dark grey background color */
+            color: #fff; /* White text color */
+            padding: 10px 20px;
+            border-radius: 0px; 
+        }
+        form {
+            text-align: center;
+            font-weight: 900;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            background-color: #333; /* Dark grey background color */
+            color: #fff; /* White text color */
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #000; /* Black color on hover */
+        }
+
+        .navbar {
+            background-color: #333; /* Dark grey background color for the navbar */
+        }
+
+        .navbar-dark .navbar-brand {
+            color: #fff; /* White text color for the brand */
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+            color: #fff; /* White text color for the links */
+        }
+
+        .navbar-dark .navbar-toggler-icon {
+            background-color: #fff; /* White color for the toggler icon */
+        }
+
+        footer {
+            padding: 10px 0px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .fa {
+            padding: 20px;
+            font-size: 23px;
+            width: 60px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            border-radius: 50%;
+        }
+
+        .fa:hover {
+            opacity: 0.5;
+            text-decoration: none;
+        }
+
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+            margin-top: 30px;
+        }
+        .fa-whatsapp {
+            background: #25d366;
+            color: white;
+        }
+        .fa-twitter {
+            background: #55ACEE;
+            color: white;
+        }
+        .fa-instagram {
+            background: #125688;
+            color: white;
+        }
+
+        p {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="bs-example">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+        <a href="/" class="navbar-brand">Fake News Detection</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/a">About Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<h1>Fake News Detector</h1>
+<form action="/predict" method="post">
+    <label for="text">Enter the news article text:</label><br>
+    <textarea id="text" name="text" rows="10" cols="90"></textarea><br>
+    <input type="submit" value="Submit">
+</form>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div style="color:#ffffff;" class="wow fadeInUp footer-copyright">
+                    <p>A project by <br>
+                        Logeshwaran E <br> Jayachandiran P<br> Maasana Eshwar S</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>

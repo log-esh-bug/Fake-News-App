@@ -1,0 +1,1 @@
+The user has to give the input article (i.e. the article which is going to be found out whether real or fake) to the webpage interface created through the use of flask framework of python and hit the submit button.
